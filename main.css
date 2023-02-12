@@ -86,7 +86,7 @@ a {
 *:disabled:hover {
   cursor: not-allowed;
   background-color: dimgrey;
-  color: linen;
+  color: gray;
   opacity: 1;
 }
 
