@@ -6,6 +6,16 @@ const numbers = document.querySelector(".raitings");
 const rates = numbers.querySelectorAll(".btn");
 const result = document.getElementById("result");
 
+rates.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    result.innerHTML = btn.innerHTML;
+
+    if (Number(btn.innerHTML) > 0) {
+      button.removeAttribute("disabled");
+    }
+  });
+});
+
 button.addEventListener("click", function () {
   submitPage.classList.add("visually-hidden");
   resultPage.classList.remove("visually-hidden");
@@ -14,10 +24,6 @@ button.addEventListener("click", function () {
 rateAgain.addEventListener("click", function () {
   submitPage.classList.remove("visually-hidden");
   resultPage.classList.add("visually-hidden");
+  button.setAttribute("disabled", "disabled");
 });
 
-rates.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    result.innerHTML = btn.innerHTML;
-  });
-});
