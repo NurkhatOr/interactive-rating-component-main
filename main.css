@@ -70,13 +70,24 @@ a {
 }
 
 .attribution {
+  width: 300px;
+  color: aliceblue;
   font-size: 11px;
   text-align: center;
   padding-bottom: 3rem;
+  margin-inline: auto;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(229, 17%, 81%);
+}
+
+*:disabled,
+*:disabled:hover {
+  cursor: not-allowed;
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
 }
 
 /* Helper Classes */
