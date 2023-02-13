@@ -175,6 +175,32 @@ a {
   margin-bottom: 2rem;
 }
 
+fieldset {
+  border: none;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 0;
+}
+
+input[type="radio"] + label {
+  --size: 3em;
+  cursor: pointer;
+  color: var(--lgt-gray);
+  font-size: 16px;
+  font-weight: 700;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--drk-blue);
+  text-align: center;
+  border: 0;
+  border-radius: 50%;
+  line-height: var(--size);
+  margin-bottom: 1.4rem;
+  transition: background-color 0.2s ease-in;
+}
+
 .btn {
   --size: 2.5em;
   cursor: pointer;
@@ -192,14 +218,14 @@ a {
   transition: background-color 0.2s ease-in;
 }
 
-.btn:hover {
+input[type="radio"]:checked + label {
   color: #fff;
-  background-color: var(--bc-primary);
+  background: var(--md-gray);
 }
 
-.btn:focus {
+input[type="radio"] + label:hover {
   color: #fff;
-  background-color: var(--md-gray);
+  background-color: var(--bc-primary);
 }
 
 .button {
