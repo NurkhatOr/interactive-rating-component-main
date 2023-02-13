@@ -1,29 +1,30 @@
 const submitPage = document.querySelector(".submit-page");
 const resultPage = document.querySelector(".result-page");
-const button = document.querySelector(".submit-button");
-const rateAgain = document.querySelector(".rate-again");
-const numbers = document.querySelector(".raitings");
-const rates = numbers.querySelectorAll(".btn");
+const submitButton = document.querySelector(".submit-button");
+const rateAgainButton = document.querySelector(".rate-again");
 const result = document.getElementById("result");
+const input = document.querySelectorAll(".raiting");
+const form = document.getElementById("raitings-form");
 
-rates.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    result.innerHTML = btn.innerHTML;
-
-    if (Number(btn.innerHTML) > 0) {
-      button.removeAttribute("disabled");
-    }
-  });
+input.forEach((item) => {
+  item.onchange = function () {
+    submitButton.removeAttribute("disabled");
+  };
+  result.innerHTML = item.value;
 });
 
-button.addEventListener("click", function () {
-  submitPage.classList.add("visually-hidden");
-  resultPage.classList.remove("visually-hidden");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  showAndHide();
+  result.innerHTML = form.raitings.value;
 });
 
-rateAgain.addEventListener("click", function () {
-  submitPage.classList.remove("visually-hidden");
-  resultPage.classList.add("visually-hidden");
-  button.setAttribute("disabled", "disabled");
+rateAgainButton.addEventListener("click", function () {
+  showAndHide();
+  submitButton.setAttribute("disabled", "disabled");
 });
 
+const showAndHide = function () {
+  submitPage.classList.toggle("visually-hidden");
+  resultPage.classList.toggle("visually-hidden");
+};
