@@ -32,14 +32,69 @@
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <div class="raitings flex jc-sb txt-center">
-          <button class="btn">1</button>
-          <button class="btn">2</button>
-          <button class="btn">3</button>
-          <button class="btn">4</button>
-          <button class="btn">5</button>
-        </div>
-        <button class="button submit-button" disabled="disabled">Submit</button>
+        <form id="raitings-form">
+          <fieldset class="flex jc-sa">
+            <legend class="visually-hidden">Select a Raiting</legend>
+            <div class="raitings flex jc-sb txt-center">
+              <input
+                id="one"
+                type="radio"
+                class="raiting"
+                name="ratings"
+                value="1"
+              />
+              <label class="raitin-value" for="one">1</label>
+            </div>
+            <div class="raitings flex jc-sb txt-center">
+              <input
+                id="two"
+                type="radio"
+                class="raiting"
+                name="ratings"
+                value="2"
+              />
+              <label class="raitin-value" for="two">2</label>
+            </div>
+            <div class="raitings flex jc-sb txt-center">
+              <input
+                id="three"
+                type="radio"
+                class="raiting"
+                name="ratings"
+                value="3"
+              />
+              <label class="raitin-value" for="three">3</label>
+            </div>
+            <div class="raitings flex jc-sb txt-center">
+              <input
+                id="four"
+                type="radio"
+                class="raiting"
+                name="ratings"
+                value="4"
+              />
+              <label class="raitin-value" for="four">4</label>
+            </div>
+            <div class="raitings flex jc-sb txt-center">
+              <input
+                id="five"
+                type="radio"
+                class="raiting"
+                name="ratings"
+                value="5"
+              />
+              <label class="raitin-value" for="five">5</label>
+            </div>
+          </fieldset>
+          <button
+            class="button submit-button"
+            id="submit-button"
+            type="submit"
+            disabled="disabled"
+          >
+            Submit
+          </button>
+        </form>
       </div>
 
       <div class="container result-page jc-fs visually-hidden">
